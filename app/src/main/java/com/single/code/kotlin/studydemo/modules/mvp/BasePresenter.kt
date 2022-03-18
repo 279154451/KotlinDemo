@@ -6,6 +6,6 @@ package com.single.code.kotlin.studydemo.modules.mvp
  * 功能描述：
  **/
 abstract class BasePresenter<V, M> : IBasePresenter where V : IBaseView, M : IBaseModel {
-    lateinit var view: V;
-    lateinit var model: M
+    var view: V? = null;
+    var model: M? =null
 }

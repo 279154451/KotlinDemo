@@ -6,4 +6,5 @@ package com.single.code.kotlin.studydemo.modules.mvp
  * 功能描述：
  **/
 interface IBasePresenter {
+    fun unAttachView()
 }

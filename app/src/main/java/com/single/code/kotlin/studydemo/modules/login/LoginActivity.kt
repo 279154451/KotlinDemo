@@ -1,10 +1,12 @@
 package com.single.code.kotlin.studydemo.modules.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.single.code.kotlin.studydemo.MainActivity
 import com.single.code.kotlin.studydemo.R
 import com.single.code.kotlin.studydemo.config.Flag
 import com.single.code.kotlin.studydemo.entity.LoginResponse
@@ -70,6 +72,8 @@ class LoginActivity : AppCompatActivity(),ILoginView{
 
     override fun loginSuccess(data: LoginResponse?) {
         Toast.makeText(this@LoginActivity, "登录成功😀", Toast.LENGTH_SHORT).show()
+        var intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
 
     override fun loginFailed(msg: String?) {

@@ -19,18 +19,18 @@ class LoginPresenter constructor(mView:ILoginView): BasePresenter<ILoginView, Lo
     }
 
     fun login(context:Context,userName:String,password:String){
-        model.login(userName,password).subscribe(object: APIResponse<LoginResponse>(context)
+        model?.login(userName,password)?.subscribe(object: APIResponse<LoginResponse>(context)
         {
             override fun success(data: LoginResponse?) {
                 // 成功  data UI
                 Log.e(Flag.TAG, "success: $data")
-                view.loginSuccess(data)
+                view?.loginSuccess(data)
             }
 
             override fun failure(errorMsg: String?) {
                 // 失败 msg UI
                 Log.e(Flag.TAG, "failure: errorMsg:$errorMsg")
-                view.loginFailed(errorMsg)
+                view?.loginFailed(errorMsg)
             }
 
         })
@@ -39,5 +39,9 @@ class LoginPresenter constructor(mView:ILoginView): BasePresenter<ILoginView, Lo
     //这种写法的函数Java无法调用，只能Kotlin调用。从而实现Kotlin和Java的隔离
     fun `notForJava`(){
 
+    }
+
+    override fun unAttachView() {
+        view = null
     }
 }
