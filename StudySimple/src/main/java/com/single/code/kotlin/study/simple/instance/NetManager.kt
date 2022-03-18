@@ -7,6 +7,7 @@ package com.single.code.kotlin.study.simple.instance
  **/
 class NetManager {
     val name:String = "reada"
+    //object 派生类
     object Holder{
         val instance = NetManager()
     }
