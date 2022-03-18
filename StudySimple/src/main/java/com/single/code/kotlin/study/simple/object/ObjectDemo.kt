@@ -17,3 +17,4 @@ fun main(){
     var(_,mName2,_)=bean.copy()//_表示拒绝接收copy值
     println("mName2=$mName2")
 }
+
