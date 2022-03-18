@@ -26,4 +26,7 @@ interface StudentDao {
     @Delete
     fun deleteStudents(vararg students: Student)
 
+    //条件查询
+    @Query("SELECT * FROM student WHERE name = :name")
+    fun queryStudent(name:String):Student
 }
