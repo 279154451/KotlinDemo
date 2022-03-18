@@ -12,7 +12,7 @@ import com.single.code.kotlin.studydemo.net.APIResponse
  * 创建人：singleCode
  * 功能描述：
  **/
-class LoginPresenter(mView:ILoginView): BasePresenter<ILoginView, LoginModel>() {
+class LoginPresenter constructor(mView:ILoginView): BasePresenter<ILoginView, LoginModel>() {
     init {
         view = mView
         model = LoginModel()
@@ -34,6 +34,10 @@ class LoginPresenter(mView:ILoginView): BasePresenter<ILoginView, LoginModel>() 
             }
 
         })
+
+    }
+    //这种写法的函数Java无法调用，只能Kotlin调用。从而实现Kotlin和Java的隔离
+    fun `notForJava`(){
 
     }
 }
