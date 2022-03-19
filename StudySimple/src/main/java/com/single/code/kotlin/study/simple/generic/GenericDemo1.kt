@@ -31,6 +31,3 @@ fun testOut(list:MutableList<out Person>){
 //    list.add(ziClazz)
 }
 
-//out == ? extends Kotlin 中的out就等于Java中的？extends
-
-//in == ? super Kotlin 中的in就等于Java中的？super
