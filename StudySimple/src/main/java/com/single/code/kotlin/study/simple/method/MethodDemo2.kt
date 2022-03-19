@@ -1,5 +1,7 @@
 package com.single.code.kotlin.study.simple.method
 
+import kotlin.concurrent.thread
+
 /**
  * 创建时间：2022/3/18
  * 创建人：singleCode
@@ -33,6 +35,7 @@ fun main() {
         }
 
     }
+    thread(false) {  }.start()
 }
 
 /**

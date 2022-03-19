@@ -5,8 +5,9 @@ package com.single.code.kotlin.study.simple.method
  * 创建人：singleCode
  * 功能描述：高阶函数：自定义扩展函数
  **/
-var name:String="test"
+var name:String? = null
 fun main() {
+    name = "test"
     method1().myRun {
     }
     method1().myRun2 { it
@@ -34,6 +35,8 @@ fun main() {
     var  r = name.myLet1 {
         println("myLet1 block run $it")
     }
+    //Elvis操作符 newStr = name?: "Default Value" , 右边的值将被使用如果name为空
+    var  newStr= name?:"Default value";
 
 }
 fun method1(){
