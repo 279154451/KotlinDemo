@@ -11,4 +11,5 @@ fun main() {
     manager.showName("hahah")
     var instance = NetManager.getManager1()
     instance?.showName("mamanger")
+    NetManager2.showName("mandafa")
 }

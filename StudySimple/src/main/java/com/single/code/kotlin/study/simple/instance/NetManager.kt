@@ -3,11 +3,10 @@ package com.single.code.kotlin.study.simple.instance
 /**
  * 创建时间：2022/3/18
  * 创建人：singleCode
- * 功能描述：Kotlin中的单例模式
+ * 功能描述：Kotlin中使用派生实现单例模式
  **/
 class NetManager {
     val name:String = "reada"
-    //object 派生类
     object Holder{
         val instance = NetManager()
     }
