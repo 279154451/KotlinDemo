@@ -23,4 +23,26 @@ fun main() {
     println("a=$a")
     var b = i.let { 4 }
     println("b=$b")
+    login("houqing","123213"){result,msg->
+        if(result){
+            println("msg=$msg")
+            1;
+        }else{
+            println("msg=$msg,登录失败")
+            0;
+        }
+
+    }
+}
+
+/**
+ * 高阶函数在业务中的使用
+ */
+fun login(name:String,password:String,callback:(Boolean,String?)->Int){
+    var value:Int;
+    if(name!=null && password!=null){
+       value = callback.invoke(true,"登录成功")
+    }else{
+        value = callback.invoke(false,null)
+    }
 }
